@@ -1,0 +1,24 @@
+
+name: test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: update packkaage
+        run: sudo apt update
+      - name: java version
+        run: java --version
+      - name: ccheck user
+        run: whoami
+      - name: sleep 30s
+        run: sleep 30s
+      - name: hosyname
+        run: hostname
+      - name: msg
+        run: echo "everything working fine"
