@@ -21,9 +21,10 @@ stages{
             usernameVariable: 'USERNAME',
             passwordVariable: 'PASSWORD'
           )
-      ])
+      ])  {
           sh 'echo "$USERNAME"'
           sh 'echo "$PASWWORD"'
+      }    
     }
   }
 
