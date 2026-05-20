@@ -32,7 +32,7 @@ stages{
       sh 'docker image build -t my-nginx .'
     }
   }
-  stage{
+  stage('RUN'){
     steps{
       sh 'docker container run -d --name deploy -P my-nginx'
     }
