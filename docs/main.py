@@ -1,3 +1,3 @@
-def mul (a,b)
-    retun a*b
+def mul (a,c)
+    retun a*c
 
