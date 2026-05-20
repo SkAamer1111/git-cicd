@@ -17,8 +17,8 @@ stages{
     steps{
       withCredentials ([ 
           usernamePassword(
-            credentialsID: 'randome-cred'
-            usernameVariable: 'USERNAME'
+            credentialsID: 'randome-cred',
+            usernameVariable: 'USERNAME',
             passwordVariable: 'PASSWORD'
           )
       ])
