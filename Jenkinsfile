@@ -13,6 +13,19 @@ stages{
         sh 'sleep 10s'
     }
   }
+  stage('cred-check'){
+    steps{
+      withCredentials ([ 
+          usernamePassword(
+            credentialsID: randome-cred
+            usernameVariable: 'USERNAME'
+            passwordVariable: 'PASSWORD'
+          )
+      ])
+          sh 'echo "$USERNAME"'
+          sh 'echo "$PASWWORD"'
+    }
+  }
 
   }
 
