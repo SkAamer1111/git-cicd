@@ -24,7 +24,17 @@ stages{
       ])  {
           sh 'echo "$USERNAME"'
           sh 'echo "$PASWWORD"'
-      }    
+      }
+    }
+  }
+  stage('Build-Image'){
+    steps{
+      sh 'docker image build -t my-nginx .'
+    }
+  }
+  stage{
+    steps{
+      sh 'docker container run -d --name deploy -P my-nginx'
     }
   }
 
